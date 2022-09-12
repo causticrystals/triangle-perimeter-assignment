@@ -19,8 +19,5 @@ function btnClicked() {
 }
 
 function dist(x1, y1, x2, y2) {
-    
+    Math.sqrt(x1 ** 2 - x2 ** 2) + Math.sqrt(y1 ** 2 - y2 ** 2);
 }
-
-// Math.sqrt(xBInput ** 2 - xAInput ** 2) + Math.sqrt(yBInput ** 2 - yAInput ** 2); 
-// (math to maybe use ^)
