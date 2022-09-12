@@ -4,3 +4,21 @@ body {
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+input {
+  width: 60px;
+}
+
+button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(14, 13, 13);
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  background-color: rgb(35, 35, 37);
+  color: white;
+  cursor: pointer;
+}

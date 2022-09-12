@@ -24,11 +24,17 @@
 
     <hr />
     <p>Enter the vertices of a triangle and click "Calculate" to determine the side lengths and perimeter of the triangle</p>
-    <p>Vertex A - xA:<input type="number">yA:<input type="number"></p>
-    <p>Vertex B - xB:<input type="number">yB:<input type="number"></p>
-    <p>Vertex C - xC:<input type="number">yC:<input type="number"></p>
+    <p>Vertex A - xA:<input type="number" id="xAInp">  
+      yA:<input type="number" id="yAInp"></p>
+    <p>Vertex B - xB:<input type="number" id="xBInp">  
+      yB:<input type="number" id="yBInp"></p>
+    <p>Vertex C - xC:<input type="number" id="xCInp">  
+      yC:<input type="number" id="yCInp"></p>
     <hr>
-    <btn>CALCULATE</btn>
-    <p>AB = <span>------</span></p>
+    <button id="btn">CALCULATE</button>
+    <p>AB = <span id="aBOutp">----</span></p>
+    <p>AC = <span id="aCOutp">----</span></p>
+    <p>BC = <span id="bCOutp">----</span></p>
+    <p>Perimeter of ABC = <span id="abcPerimeter">----</span></p>
   </body>
 </html>
