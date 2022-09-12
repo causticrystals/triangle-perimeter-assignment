@@ -12,13 +12,15 @@ function btnClicked() {
     let yCInput = +document.getElementById("yCInp").value;
 
     // Get calculated side lengths and perimeter
-    //
-    document.getElementById("aBOutp").innerHTML = dist((xBInput - xAInput) + (yBInput - yAInput));
-    document.getElementById("aCOutp").innerHTML = dist((xCInput - xAInput) + (yCInput - yAInput));
-    document.getElementById("bCOutp").innerHTML = dist((xCInput - xBInput) + (yCInput - yBInput));
+    document.getElementById("aBOutp").innerHTML = dist(xAInput, yAInput, xBInput, yBInput);
+    document.getElementById("aCOutp").innerHTML = dist(xAInput, yAInput, xCInput, yCInput);
+    document.getElementById("bCOutp").innerHTML = dist(xBInput, yBInput, xCInput, yCInput);
     document.getElementById("abcPerimeter").innerHTML = dist();
 }
 
-function dist() {
+function dist(x1, y1, x2, y2) {
     
 }
+
+// Math.sqrt(xBInput ** 2 - xAInput ** 2) + Math.sqrt(yBInput ** 2 - yAInput ** 2); 
+// (math to maybe use ^)
