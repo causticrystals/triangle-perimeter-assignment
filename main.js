@@ -11,20 +11,20 @@ function btnClicked() {
     let xCInput = +document.getElementById("xCInp").value;
     let yCInput = +document.getElementById("yCInp").value;
 
-    // Get calculated side lengths and perimeter
-    document.getElementById("aBOutp").innerHTML = dist(xAInput, yAInput, xBInput, yBInput);
-    document.getElementById("aCOutp").innerHTML = dist(xAInput, yAInput, xCInput, yCInput);
-    document.getElementById("bCOutp").innerHTML = dist(xBInput, yBInput, xCInput, yCInput);
+    // Process
+    let aBSide = dist(xAInput, yAInput, xBInput, yBInput);
+    let aCSide = dist(xAInput, yAInput, xCInput, yCInput);
+    let bCSide = dist(xBInput, yBInput, xCInput, yCInput);
 
-    // // Uhh whole perimeter stuff
-    // let sideAB = +document.getElementById("aBOutp").value
-    // let sideAC = +document.getElementById("aCOutp").value
-    // let sideBC = +document.getElementById("bCOutp").value
-    // document.getElementById("abcPerimeter").innerHTML = (sideAB + sideAC + sideBC);
+    // Get calculated side lengths and perimeter
+    document.getElementById("aBOutp").innerHTML = aBSide;
+    document.getElementById("aCOutp").innerHTML = aCSide;
+    document.getElementById("bCOutp").innerHTML = bCSide;
+    document.getElementById("abcPerimeter").innerHTML = aBSide + aCSide + bCSide;
 }
 
 function dist(x1, y1, x2, y2) {
-    let sideCalc = Math.sqrt(x1 ** 2 - x2 ** 2) + Math.sqrt(y1 ** 2 - y2 ** 2);
+    let sideCalc = Math.sqrt((x1 - x2) ** 2 + (y1 - y2)** 2);
     return sideCalc;
 }
 
